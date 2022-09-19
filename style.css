@@ -1,0 +1,526 @@
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/*Início das configurações da header*/
+header {
+    width: 100%;
+    height: 100px;
+    line-height: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #f1c40f;
+}
+.active{
+  width:auto;
+}
+.brand {
+    width: auto;
+    height: 90%;
+    float: left;
+    margin: 0 0 0 4%;
+}
+/*Início das configurações da Navigation*/
+.menu {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+.menu ul {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;   /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.menu ul a {
+    width: 20%;
+    height: inherit;
+    color: #222;
+    display: inline-block;
+}
+.menu ul a:hover {
+    background-color: #222;
+    color: #fff;
+}
+#menuToggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+/*Início das configurações da Navigation com dispositivos < 768px*/
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+    .menu ul {
+        display: block;
+        max-height: 0;
+    	overflow: hidden;
+    	-moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+    	transition: max-height 0.3s;
+        /*Para fazer com que o menu saia da esquerda, você deve trocar max-height por max-width*/
+        /*Para fazer com que o menu saia da direita, você deve trocar max-height por max-width e setar float: right*/
+    }
+    .menu ul a {
+        text-align: left;
+        width: 100%;
+        height: 50px;
+        background-color: #f1c40f;
+        padding: 10px 0px 10px 5%;
+    }
+    .menu-icon {
+        width: 100px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 60px;
+    }
+    #menuToggle:checked ~ ul {
+        max-height: 300px;
+        /*Para fazer com que o menu saia da esquerda ou direita, você deve trocar max-height por max-width*/
+    }
+    .menu-icon i {
+        font-size: 1.4em;
+    }
+}
+
+/*------------------------------SLIDES(INCOMPLETE)---------------------------------*/
+.slides
+{
+    height:500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 5px;
+    display: flex;
+}
+
+.slides img{
+    justify-content: center;
+    width:100%;
+}
+
+/*-----------------------------WHO ARE WE-----------------------------*/
+
+.whoarewe
+{
+  background-color: rgba(231, 234, 240, 0.822);
+}
+
+.image
+{
+  background-color: rgba(231, 234, 240, 0.822);
+  padding-left:9%;
+  display: inline;
+  width:35%;
+
+}
+.whoarewetext
+{
+  display:inherit;
+  float:right;
+  width: 45%;
+  color:rgba(0, 0, 0, 0.788);
+  margin-right: 7%;
+  text-align: left;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.whoarewetext{
+  width: 60%;
+  margin: 40px auto;
+}
+button {
+  margin: 20px;
+  text-align: center;
+}
+.custom-btn {
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-7 {
+  color: #2016b3;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+}
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #2016b3;
+  box-shadow: 0 0 5px #2016b3;
+  transition: all 0.3s ease;
+}
+.btn-7:before{
+   height: 50%;
+   width: 2px;
+}
+.btn-7:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #2016b3;
+  box-shadow: 0 0 5px #2016b3;
+  transition: all 0.3s ease;
+}
+.btn-7 span:before {
+  width: 2px;
+  height: 50%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 20%;
+}
+.btn-7 span:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after {
+  width: 100%;
+}
+
+body{
+  margin:0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+.middle{
+  position:inherit;
+  top:20;
+  width:50%
+  transform:translateY(-20%);
+}
+.counting-sec{
+  padding: 20px 0px;
+  width:30;
+  background: linear-gradient(-180deg,#dfe4ea,#0fb9b1);
+}
+.inner-width{
+  max-width: 1200px;
+  margin:inherit;
+  display:inline-flex;
+}
+.col{
+  flex: 1;
+  text-align: center;
+  padding: 180px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width:50%
+  color:black;
+  text-transform: uppercase;
+}
+.col i{
+  font-size: 40px;
+  color:#333;
+}
+.num{
+  font-size: 40px;
+  margin: 8px 0;
+
+}
+/*----------------------------FEATURE-----------------------------*/
+ul
+{
+
+  list-style: none;
+  margin-top: 220px;
+  margin-bottom:100px;
+  width:100%;
+  border-top: 200px;
+}
+
+ul div
+{
+  display: inline-block;
+  text-align: center;
+  font-family: sans-serif;
+}
+ul div h5
+{
+  color:rgb(253, 28, 76);
+}
+ul div p
+{
+  text-align: center;
+  width: 290px;
+  font-size: 17px;
+}
+ul div li{
+    display: inline-block;
+    border-radius: 50%;
+}
+
+ul div li a
+ {
+      color: white;
+      display: table-cell;
+      vertical-align:middle;
+      text-align: center;
+      text-decoration: none;
+      height: 140px;
+      width: 140px;
+      margin-top: 100px;
+      border:2px solid black;
+      border-radius: 100%;
+ }
+ ul li a:hover, a:active
+ {
+      color: rgb(30, 173, 255);
+      background-color: white;
+      text-decoration:overline;
+}
+
+ul li .box1
+{
+  background-color:rgb(255, 58, 101);
+}
+ul li .box2
+{
+  background-color:rgb(255, 93, 34);
+}
+ul li .box3
+{
+  background-color:rgb(16, 206, 16);
+}
+ul li .box4
+{
+  background-color:rgb(47, 196, 196);
+}
+
+/*-----------------------------CONTACT-----------------------------*/
+.contact
+{
+  display:contents;
+}
+.contact .icon
+{
+  display:inline-grid;
+  background-color: rgba(231, 234, 240, 0.822);
+  border-radius: 50%;
+  color:rgb(16, 206, 16);
+  margin-right:5%;
+  margin:5%;
+  padding: 7px 15em 7 15em;;
+}
+.contact .details
+{
+  float: right;
+  text-align: left;
+  margin-right:5%;
+  margin-bottom: 3%;
+}
+/*----------------------------------chatbox-----------------------------------*/
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #ffffff;
+  padding: 14px 14px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/*----------------------------------chatbox-----------------------------------*/
+
+/*-----------------------------FOOTER-----------------------------*/
+footer{
+  background-color:rgb(47, 196, 196);
+  width:100%;
+  padding:3% 8% 3% 8%;
+}
+footer a
+{
+  padding: 1%;
+  color:white;
+}
+.top-button i
+{
+  padding-left:9px;
+}
+.top-button
+{
+  display: inline-block;
+  background-color: black;
+  border-radius: 55%;
+  color:white;
+  width:40px;
+  height: 40px;
+  position:fixed;
+  bottom:5px;
+  right:10px;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: 	#f9ca24;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
